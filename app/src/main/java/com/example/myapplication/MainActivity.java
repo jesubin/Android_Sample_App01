@@ -1,6 +1,8 @@
 package com.example.myapplication;
 
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -9,6 +11,11 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity {
+
+    //xml에 정의된 뷰를 찾아서 변수로 등록
+    private EditText editText;
+    private EditText editTextPasswd;
+    private Button button;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,5 +27,20 @@ public class MainActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+
+       eidtText = findViewById(R.id.editTextText);
+       editTextPasswd = findViewById(R.id.editTextTextPassword);
+       button = findViewById(R.id.button);
+
+       button.setOnClickListener(
+               new View.OnClickListener(){
+                    @Override
+                    public void onClick(View v){
+                        String userid = editText.getText().toString();
+
+                        Toast.makeText(MainActivity.this, msg, Toast.LENGTH_SHORT).show();
+           }
+       });
+
     }
 }

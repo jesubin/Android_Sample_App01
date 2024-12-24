@@ -8,6 +8,7 @@
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Hello World!"
@@ -21,27 +22,31 @@
         android:id="@+id/editTextText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="3dp"
+        android:layout_marginBottom="15dp"
         android:ems="10"
         android:hint="userid"
         android:inputType="text"
-        tools:layout_editor_absoluteX="92dp"
-        tools:layout_editor_absoluteY="429dp" />
+        app:layout_constraintBottom_toTopOf="@+id/editTextTextPassword"
+        app:layout_constraintStart_toStartOf="@+id/editTextTextPassword" />
 
     <EditText
         android:id="@+id/editTextTextPassword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="89dp"
         android:ems="10"
         android:hint="password"
         android:inputType="textPassword"
-        tools:layout_editor_absoluteX="89dp"
-        tools:layout_editor_absoluteY="489dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="490dp" />
 
-    <com.google.android.material.chip.Chip
-        android:id="@+id/chip"
+    <Button
+        android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="181dp"
-        tools:layout_editor_absoluteY="600dp" />
+        android:text="Button"
+        tools:layout_editor_absoluteX="155dp"
+        tools:layout_editor_absoluteY="572dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
